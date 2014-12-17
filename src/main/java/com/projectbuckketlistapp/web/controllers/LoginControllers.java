@@ -1,22 +1,24 @@
 package com.projectbuckketlistapp.web.controllers;
 
-import java.util.Locale;
+import java.math.BigInteger;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
+import com.projectbuckketlistapp.DTO.LoginRequestDTO;
+import com.projectbuckketlistapp.DTO.LoginResponseDTO;
 import com.projectbuckketlistapp.entites.TblMember;
 import com.projectbuckketlistapp.repositories.MemberRepo;
 
 
 
-@Controller
+@RestController
 public class LoginControllers {
 	
 	private static final Logger logger = LoggerFactory.getLogger(LoginControllers.class);
@@ -25,7 +27,7 @@ public class LoginControllers {
 	private MemberRepo member;
 	
 	@RequestMapping(value="/login",method=RequestMethod.GET)
-	public String getLogin(Model model) {
+	public LoginResponseDTO getLogin(@RequestParam("username")String username,@RequestParam("passkey")String passkey) {
 		
 		logger.info("#############Welcome home! The client locale is {}.");
 		
@@ -35,18 +37,30 @@ public class LoginControllers {
 		//String formattedDate = dateFormat.format(date);
 		
 		//model.addAttribute("serverTime", formattedDate );
-		TblMember newMember = new TblMember();
+		/*TblMember newMember = new TblMember();
 		newMember.setMemberFirstName("udit");
-		newMember.setMemberPhone(Integer.parseInt("73855"));
+		newMember.setMemberPhone(new BigInteger("7385522855"));
 		newMember.setMemberMailAddress("udit@bc");
 		TblMember user = member.save(newMember);
 		if(null != user){
 			logger.info("######################### : "+ "sucess");
-			model.addAttribute("result", "sucess" );
+			//model.addAttribute("result", "sucess" );
 		}else{
 			logger.info("######################### : "+ "error");
-			model.addAttribute("result", "failed" );
+			//model.addAttribute("result", "failed" );
+		}*/
+		LoginResponseDTO rep = new LoginResponseDTO();
+		TblMember user = member.findByMemberMailAddress(username);
+		if(null!=user){
+			if (user.getMemberPassword().equals(passkey)) {
+				rep.setUsername( user.getMemberFirstName());
+				rep.setUserId(user.getMemberId().toString());
+			}else{
+				rep.setErrorMsg( "wrong password");
+			}
+		}else{
+			rep.setErrorMsg( "email not registered");
 		}
-		return "login";
+		return rep;
 	}
 }

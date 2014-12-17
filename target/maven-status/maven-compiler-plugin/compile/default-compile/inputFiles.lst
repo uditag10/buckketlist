@@ -1,0 +1,17 @@
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\cofig\SecurityConfig.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\cofig\PersistenceConfig.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\service\impl\RegistrationServiceImpl.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\DTO\LoginResponseDTO.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\DTO\LoginRequestDTO.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\service\RegistrationService.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\web\config\WebMvcConfig.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\DTO\RegistrationRequestDTO.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\web\controllers\RegistrationController.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\web\controllers\LoginControllers.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\entites\TblBucket.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\cofig\AppConfig.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\repositories\MemberRepo.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\repositories\BucketRepo.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\entites\TblMember.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\web\controllers\WelcomeController.java
+C:\workstation\bucktlist\buckketlist\src\main\java\com\projectbuckketlistapp\web\config\SpringWebAppInitializer.java

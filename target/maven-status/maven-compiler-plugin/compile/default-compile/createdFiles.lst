@@ -1,0 +1,16 @@
+com\projectbuckketlistapp\web\controllers\RegistrationController.class
+com\projectbuckketlistapp\service\RegistrationService.class
+com\projectbuckketlistapp\repositories\MemberRepo.class
+com\projectbuckketlistapp\DTO\RegistrationRequestDTO.class
+com\projectbuckketlistapp\DTO\LoginRequestDTO.class
+com\projectbuckketlistapp\web\config\SpringWebAppInitializer.class
+com\projectbuckketlistapp\repositories\BucketRepo.class
+com\projectbuckketlistapp\web\controllers\WelcomeController.class
+com\projectbuckketlistapp\web\controllers\LoginControllers.class
+com\projectbuckketlistapp\service\impl\RegistrationServiceImpl.class
+com\projectbuckketlistapp\cofig\AppConfig.class
+com\projectbuckketlistapp\web\config\WebMvcConfig.class
+com\projectbuckketlistapp\DTO\LoginResponseDTO.class
+com\projectbuckketlistapp\cofig\PersistenceConfig.class
+com\projectbuckketlistapp\entites\TblBucket.class
+com\projectbuckketlistapp\entites\TblMember.class

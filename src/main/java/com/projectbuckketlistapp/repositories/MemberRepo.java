@@ -8,4 +8,5 @@ import com.projectbuckketlistapp.entites.TblMember;
 
 public interface MemberRepo extends CrudRepository<TblMember, String> {
 
+	TblMember findByMemberMailAddress(String memberMailAddress);
 }

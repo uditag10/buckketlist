@@ -1,7 +1,10 @@
 package com.projectbuckketlistapp.entites;
 
 import java.io.Serializable;
+import java.math.BigInteger;
+
 import javax.persistence.*;
+
 import java.util.Date;
 
 
@@ -21,10 +24,10 @@ public class TblMember implements Serializable {
 	private Long memberId;
 
 	@Column(name="is_deleted")
-	private byte isDeleted;
+	private Byte isDeleted;
 
 	@Column(name="is_fb_auth")
-	private byte isFbAuth;
+	private Byte isFbAuth;
 
 	@Column(name="member__fb_id")
 	private String memberFbId;
@@ -42,7 +45,18 @@ public class TblMember implements Serializable {
 	private String memberMailAddress;
 
 	@Column(name="member_phone")
-	private int memberPhone;
+	private BigInteger memberPhone;
+	
+	@Column(name="member_password")
+	private String memberPassword;
+
+	public String getMemberPassword() {
+		return memberPassword;
+	}
+
+	public void setMemberPassword(String memberPassword) {
+		this.memberPassword = memberPassword;
+	}
 
 	public TblMember() {
 	}
@@ -55,19 +69,19 @@ public class TblMember implements Serializable {
 		this.memberId = memberId;
 	}
 
-	public byte getIsDeleted() {
+	public Byte getIsDeleted() {
 		return this.isDeleted;
 	}
 
-	public void setIsDeleted(byte isDeleted) {
+	public void setIsDeleted(Byte isDeleted) {
 		this.isDeleted = isDeleted;
 	}
 
-	public byte getIsFbAuth() {
+	public Byte getIsFbAuth() {
 		return this.isFbAuth;
 	}
 
-	public void setIsFbAuth(byte isFbAuth) {
+	public void setIsFbAuth(Byte isFbAuth) {
 		this.isFbAuth = isFbAuth;
 	}
 
@@ -111,11 +125,11 @@ public class TblMember implements Serializable {
 		this.memberMailAddress = memberMailAddress;
 	}
 
-	public int getMemberPhone() {
+	public BigInteger getMemberPhone() {
 		return this.memberPhone;
 	}
 
-	public void setMemberPhone(int memberPhone) {
+	public void setMemberPhone(BigInteger memberPhone) {
 		this.memberPhone = memberPhone;
 	}
 
